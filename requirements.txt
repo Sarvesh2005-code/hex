@@ -1,0 +1,12 @@
+yt-dlp
+moviepy
+faster-whisper
+google-generativeai
+python-dotenv
+selenium
+webdriver-manager
+ffmpeg-python
+numpy
+tqdm
+pyyaml
+torch

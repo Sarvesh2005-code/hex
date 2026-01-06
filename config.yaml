@@ -1,0 +1,33 @@
+# OpenClip Configuration
+
+system:
+  gpu_enabled: auto # auto, true, false
+  log_level: INFO
+  output_dir: output
+  download_dir: downloads
+
+models:
+  transcriber:
+    size: tiny # tiny, top, small, medium, large-v2
+    device: auto
+    compute_type: int8
+
+  analyzer:
+    model_name: gemini-2.0-flash-lite-preview
+    max_retries: 5
+    base_delay: 10
+
+video:
+  target_resolution: [1080, 1920]
+  crop_strategy: center # center, face (coming soon)
+  subtitle:
+    enabled: true
+    font: Arial-Bold
+    font_size: 70
+    color: yellow
+    stroke_color: black
+    stroke_width: 2
+
+upload:
+  browser_profile: null # Path to chrome profile
+  headless: false
