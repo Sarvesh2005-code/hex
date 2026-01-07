@@ -19,14 +19,19 @@ models:
 
 video:
   target_resolution: [1080, 1920]
-  crop_strategy: center # center, face (coming soon)
+  crop_strategy: center # center, smart, split
+  layout: full # full (default), split
   subtitle:
     enabled: true
     font: Arial-Bold
     font_size: 70
-    color: yellow
+    color: white
+    highlight_color: yellow
     stroke_color: black
     stroke_width: 2
+
+imagemagick:
+  binary_path: "C:\\Program Files\\ImageMagick-7.1.1-Q16-HDRI\\magick.exe" # UPDATE THIS PATH manually
 
 upload:
   browser_profile: null # Path to chrome profile

@@ -1,0 +1,38 @@
+services:
+  - type: worker
+    name: openclip-automation
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python -m src.automation
+    envVars:
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: DISCORD_WEBHOOK_URL
+        sync: false
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false
+      - key: TELEGRAM_CHAT_ID
+        sync: false
+      - key: SMTP_SERVER
+        value: smtp.gmail.com
+      - key: SMTP_PORT
+        value: 587
+      - key: EMAIL_USER
+        sync: false
+      - key: EMAIL_PASSWORD
+        sync: false
+      - key: EMAIL_TO
+        sync: false
+      - key: YOUTUBE_CHANNEL_IDS
+        sync: false
+      - key: DISCOVERY_KEYWORDS
+        sync: false
+      - key: PLAYLIST_URLS
+        sync: false
+      - key: SCHEDULE_INTERVAL_HOURS
+        value: 6
+      - key: MAX_UPLOADS_PER_DAY
+        value: 5
+      - key: HEALTH_CHECK_INTERVAL
+        value: 300
+
